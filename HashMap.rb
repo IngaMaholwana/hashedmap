@@ -12,5 +12,15 @@ class HashMap
       
    hash_code
   end
+  def set(key, value)
+    index = hash(key) % @capacity
+    @buckets[index] = value
+  end
+  def get(key)
+    index = hash(key) % @capacity
+    @buckets[index]
+  end
+ 
   
+
 end
